@@ -10,6 +10,7 @@ function AccountOperations() {
   const [currency, setCurrency] = useState("USD");
 
   const dispatch = useDispatch();
+
   const {
     loan: currentLoan,
     loanPurpose: currentLoanPurpose,
@@ -96,7 +97,10 @@ function AccountOperations() {
         </div>
 
         <div>
-          <span>Pay back ${currentLoan}</span>
+          <span>
+            Pay back ${currentLoan}
+            {currentLoanPurpose}
+          </span>
           <button onClick={handlePayLoan}>Pay loan</button>
         </div>
       </div>
